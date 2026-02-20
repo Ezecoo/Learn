@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Course Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginPage">
+    <h2>Login</h2>
+    <label>
+      Email: <input type="email" id="email">
+    </label>
+    <label>
+      Role:
+      <select id="role">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+    </label>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="teacherDashboard" class="hidden">
+    <h2>Teacher Dashboard</h2>
+    <h3>Create Course</h3>
+    <input placeholder="Course Title" id="courseTitle">
+    <input placeholder="Student Code" id="studentCode">
+    <button onclick="createCourse()">Create Course</button>
+    <h3>Your Courses</h3>
+    <ul id="teacherCourses"></ul>
+  </div>
+
+  <div id="studentDashboard" class="hidden">
+    <h2>Student Dashboard</h2>
+    <input placeholder="Enter Teacher's Student Code" id="joinCode">
+    <button onclick="joinCourse()">Join Course</button>
+    <h3>Your Courses</h3>
+    <ul id="studentCourses"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
